@@ -1,0 +1,52 @@
+{
+  "languages": {
+    "JavaScript": {
+      "formatter": "language_server",
+      "language_servers": [
+        "biome",
+        "!eslint",
+        "!typescript-language-server"
+      ],
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "formatter": "language_server",
+      "language_servers": [
+        "biome",
+        "!eslint",
+        "!typescript-language-server"
+      ],
+      "format_on_save": "on"
+    },
+    "TSX": {
+      "formatter": "language_server",
+      "language_servers": [
+        "biome",
+        "!eslint",
+        "!typescript-language-server"
+      ],
+      "format_on_save": "on"
+    },
+    "JSON": {
+      "formatter": "language_server",
+      "language_servers": [
+        "json-language-server",
+        "biome",
+        "package-version-server"
+      ],
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  },
+  "formatter": "language_server",
+  "format_on_save": "on",
+  "prettier": {
+    "allowed": false
+  }
+}

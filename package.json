@@ -10,6 +10,7 @@
   "author": "scottmotte, forked and changed by Michael Sageryd",
   "license": "BSD-2-Clause",
   "devDependencies": {
+    "@biomejs/biome": "^2.3.8",
     "pre-commit": "^1.2.2",
     "tape": "^5.7.2"
   },

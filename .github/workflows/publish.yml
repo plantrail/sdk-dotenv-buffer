@@ -1,0 +1,40 @@
+name: Publish to NPM
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Ensure npm 11.5.1+
+        run: npm install -g npm@latest
+
+      - run: npm ci
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build (if present)
+        run: npm run build --if-present
+
+      - name: Run tests (if present)
+        run: npm test --if-present
+        env:
+          LC_ALL: sv_SE.UTF-8
+          LANG: sv_SE.UTF-8
+          TZ: Europe/Stockholm
+
+      - name: Publish to NPM with Provenance
+        run: npm publish --access restricted

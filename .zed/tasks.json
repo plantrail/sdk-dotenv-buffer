@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Show Current Directory",
+    "command": "pwd",
+    "tags": [
+      "helper"
+    ]
+  },
+  {
+    "label": "Git Status",
+    "command": "git status",
+    "tags": [
+      "git"
+    ]
+  },
+  {
+    "label": "Git Log (Recent)",
+    "command": "git log --oneline -10",
+    "tags": [
+      "git"
+    ]
+  },
+  {
+    "label": "Publish: Patch Version",
+    "command": "npm version patch && git push --follow-tags",
+    "tags": [
+      "npm",
+      "publish"
+    ]
+  },
+  {
+    "label": "Publish: Minor Version",
+    "command": "npm version minor && git push --follow-tags",
+    "tags": [
+      "npm",
+      "publish"
+    ]
+  },
+  {
+    "label": "Publish: Major Version",
+    "command": "npm version major && git push --follow-tags",
+    "tags": [
+      "npm",
+      "publish"
+    ]
+  },
+  {
+    "label": "npm install",
+    "command": "npm install",
+    "tags": [
+      "npm"
+    ]
+  },
+  {
+    "label": "npm test",
+    "command": "npm test",
+    "tags": [
+      "npm",
+      "test"
+    ]
+  }
+]
